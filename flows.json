@@ -1,0 +1,5562 @@
+[
+    {
+        "id": "77976561f574700b",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "19102190329d787e",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7bbafb6fafdd2110",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a100000000000002",
+        "type": "tab",
+        "label": "IoT - Servidor REST",
+        "disabled": false,
+        "info": "Recibe GET, muestra HTML y actualiza gauges del dashboard"
+    },
+    {
+        "id": "a100000000000001",
+        "type": "tab",
+        "label": "IoT - Cliente REST",
+        "disabled": false,
+        "info": "Envía temperatura/humedad aleatorias cada 60 s por GET"
+    },
+    {
+        "id": "74ab8cc093354e4c",
+        "type": "tab",
+        "label": "Semana 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1df8f5cfd8d08c15",
+        "type": "tab",
+        "label": "Chart multi líneas",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "87e16bdb0eed5d8f",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "248e0ae5d81fc89f",
+        "type": "tab",
+        "label": "Flujo 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cef1b5782eb9acc5",
+        "type": "tab",
+        "label": "Flujo 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f100000000000001",
+        "type": "tab",
+        "label": "Cliente Sensor",
+        "disabled": false,
+        "info": "Simula sensores cada 60 y 120 segundos, publica con MQTT y envía estado en JSON sin Function."
+    },
+    {
+        "id": "f100000000000002",
+        "type": "tab",
+        "label": "Cliente Dashboard",
+        "disabled": false,
+        "info": "Recibe únicamente desde MQTT, visualiza mediciones y controla el riego."
+    },
+    {
+        "id": "3eeb1b316d22c630",
+        "type": "tab",
+        "label": "Cliente REST",
+        "disabled": false,
+        "info": "Dos botones consultan servicios REST. Los resultados se revisan en debug1 y debug2."
+    },
+    {
+        "id": "0c468aa1d6e8f5ac",
+        "type": "tab",
+        "label": "Servidor REST",
+        "disabled": false,
+        "info": "Dos endpoints GET: consumo dinámico y ubicación del laboratorio."
+    },
+    {
+        "id": "fef8c534b412dd3e",
+        "type": "tab",
+        "label": "A09 - Simulador de Planta",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "17c8b03b530cf953",
+        "type": "tab",
+        "label": "A09 - Receptor MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d03eb7c19bb59125",
+        "type": "tab",
+        "label": "A09 - Dashboard Industrial",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9ee932ce78095ba9",
+        "type": "tab",
+        "label": "A09 - Control y Automatización",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f8e8a5680da7ae29",
+        "type": "tab",
+        "label": "A09 - KPI e Históricos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b2edb497d2bfc548",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "a6debbb5d1a7d25e",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "d409fcf044a755cd",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "b2edb497d2bfc548",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "a6debbb5d1a7d25e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "0a8e88ed54c91b25",
+        "type": "ui-group",
+        "name": "Grupo 1",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 8,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "10a9e83e2a827b41",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 7,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c5c109f1c0b375d1",
+        "type": "ui-group",
+        "name": "Group Boton",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 6,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ebc64ad0c4387673",
+        "type": "ui-group",
+        "name": "Group Encet/Apag",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "924995533f976fe7",
+        "type": "ui-group",
+        "name": "Group Lineas",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2cdf7a695f6c6590",
+        "type": "ui-group",
+        "name": "Grupo ejer03",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1c37ca378a0c2997",
+        "type": "mqtt-broker",
+        "name": "hivemq",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fb5f430c0ccf50da",
+        "type": "ui-group",
+        "name": "Group temp",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 9,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7a754b84d8bdbc5f",
+        "type": "ui-group",
+        "name": "Group hum",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d100000000000003",
+        "type": "ui-group",
+        "name": "Monitoreo Ambiental",
+        "page": "d409fcf044a755cd",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f100000000000003",
+        "type": "mqtt-broker",
+        "name": "Mosquitto local",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {}
+    },
+    {
+        "id": "f100000000000007",
+        "type": "ui-theme",
+        "name": "Tema verde de riego",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#2b8f5a",
+            "bgPage": "#f0f8f3",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d8e9dc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "12px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "f100000000000005",
+        "type": "ui-page",
+        "name": "Page 3",
+        "ui": "b2edb497d2bfc548",
+        "path": "/monitoreo",
+        "icon": "water",
+        "layout": "grid",
+        "theme": "f100000000000007",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "f100000000000006",
+        "type": "ui-group",
+        "name": "Humedad y Temperatura",
+        "page": "f100000000000005",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d0ca9ac8c5994ee4",
+        "type": "ui-theme",
+        "name": "Tema predeterminado",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#2563eb",
+            "bgPage": "#f3f4f6",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d1d5db"
+        }
+    },
+    {
+        "id": "522c091736504186",
+        "type": "ui-page",
+        "name": "Consumo energético",
+        "ui": "b2edb497d2bfc548",
+        "path": "energia",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "d0ca9ac8c5994ee4",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 4
+    },
+    {
+        "id": "f91d257234fb45fb",
+        "type": "ui-group",
+        "name": "Consultas al servidor",
+        "page": "522c091736504186",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "4c1379c5b553b0e5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3c2c8578563b970a",
+        "type": "ui-theme",
+        "name": "Tema Industrial A09",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "e19edb4e7ed3ec82",
+        "type": "ui-page",
+        "name": "Planta de Tratamiento A09",
+        "ui": "b2edb497d2bfc548",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "3c2c8578563b970a",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "01eaef5ba49512dd",
+        "type": "ui-group",
+        "name": "Monitoreo de Planta",
+        "page": "e19edb4e7ed3ec82",
+        "width": "12",
+        "height": "12",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0c208bdf9cd7d725",
+        "type": "inject",
+        "z": "77976561f574700b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ejercicio3",
+        "payload": " { \"temp\": 23, \"hum\": 88, \"name\": \"alfonso\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "5fc234526c487604",
+                "e65a39241ec2a8b8",
+                "8dbfc6c618fec718",
+                "061abf626041da6e"
+            ]
+        ]
+    },
+    {
+        "id": "5fc234526c487604",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ccc3177616905bec",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1204a4bb117ccf12",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e65a39241ec2a8b8",
+        "type": "change",
+        "z": "77976561f574700b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "ccc3177616905bec"
+            ]
+        ]
+    },
+    {
+        "id": "8dbfc6c618fec718",
+        "type": "change",
+        "z": "77976561f574700b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hum",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "1204a4bb117ccf12"
+            ]
+        ]
+    },
+    {
+        "id": "061abf626041da6e",
+        "type": "change",
+        "z": "77976561f574700b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "9a4c30c293cac9dc"
+            ]
+        ]
+    },
+    {
+        "id": "9a4c30c293cac9dc",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "14e5223a0e40341a",
+        "type": "inject",
+        "z": "77976561f574700b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 660,
+        "wires": [
+            [
+                "d648f98f126d45aa"
+            ]
+        ]
+    },
+    {
+        "id": "7ba72286f2b83134",
+        "type": "switch",
+        "z": "77976561f574700b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 660,
+        "wires": [
+            [
+                "cc41655ad206bc8d"
+            ],
+            [
+                "09af768770627c82"
+            ]
+        ]
+    },
+    {
+        "id": "d648f98f126d45aa",
+        "type": "random",
+        "z": "77976561f574700b",
+        "name": "",
+        "low": "20",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "7ba72286f2b83134",
+                "2658a884693d2513"
+            ]
+        ]
+    },
+    {
+        "id": "09af768770627c82",
+        "type": "change",
+        "z": "77976561f574700b",
+        "name": "Alarma de temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Alarma",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 660,
+        "wires": [
+            [
+                "54a0fa9a3fc0f3dc"
+            ]
+        ]
+    },
+    {
+        "id": "54a0fa9a3fc0f3dc",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "alarma",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2658a884693d2513",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "temp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f0ba5c0135a23148",
+        "type": "debug",
+        "z": "77976561f574700b",
+        "name": "Temperatura normal",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "cc41655ad206bc8d",
+        "type": "change",
+        "z": "77976561f574700b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "temp normal",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 600,
+        "wires": [
+            [
+                "f0ba5c0135a23148"
+            ]
+        ]
+    },
+    {
+        "id": "ba2d52d33c925aeb",
+        "type": "inject",
+        "z": "19102190329d787e",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Clase2",
+        "payload": "{\"temp\":23,\"hum\":88,\"name\":\"Luis\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "95dd9e852c8d0748",
+                "a9a250e4e838eab6",
+                "9dbb3132166983d4",
+                "ef6f10817eb9b98e"
+            ]
+        ]
+    },
+    {
+        "id": "95dd9e852c8d0748",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a9a250e4e838eab6",
+        "type": "change",
+        "z": "19102190329d787e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "1f8fa369624ff918"
+            ]
+        ]
+    },
+    {
+        "id": "1f8fa369624ff918",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "Temperatura",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9dbb3132166983d4",
+        "type": "change",
+        "z": "19102190329d787e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hum",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 500,
+        "wires": [
+            [
+                "39589da843d389ac"
+            ]
+        ]
+    },
+    {
+        "id": "39589da843d389ac",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "Humedad",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ef6f10817eb9b98e",
+        "type": "change",
+        "z": "19102190329d787e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 580,
+        "wires": [
+            [
+                "622c962323391659"
+            ]
+        ]
+    },
+    {
+        "id": "622c962323391659",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "Nombre",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e7d5a0dd75db9979",
+        "type": "inject",
+        "z": "19102190329d787e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0.15",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 900,
+        "wires": [
+            [
+                "8775c87d3ab7b7c0"
+            ]
+        ]
+    },
+    {
+        "id": "8775c87d3ab7b7c0",
+        "type": "random",
+        "z": "19102190329d787e",
+        "name": "",
+        "low": "20",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 340,
+        "y": 900,
+        "wires": [
+            [
+                "a5e7b041b50b077e",
+                "e62826e1415f7dbd"
+            ]
+        ]
+    },
+    {
+        "id": "a5e7b041b50b077e",
+        "type": "switch",
+        "z": "19102190329d787e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 900,
+        "wires": [
+            [
+                "490bc34a269dc3f0"
+            ],
+            [
+                "a5f381c6a58b25f4"
+            ]
+        ]
+    },
+    {
+        "id": "e62826e1415f7dbd",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "Termperatura",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "490bc34a269dc3f0",
+        "type": "change",
+        "z": "19102190329d787e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Alarma de temperatura",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 900,
+        "wires": [
+            [
+                "acc0546c65dde17c"
+            ]
+        ]
+    },
+    {
+        "id": "acc0546c65dde17c",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "Alarma",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "a5f381c6a58b25f4",
+        "type": "change",
+        "z": "19102190329d787e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "normal",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 980,
+        "wires": [
+            [
+                "a4257e608a252898"
+            ]
+        ]
+    },
+    {
+        "id": "a4257e608a252898",
+        "type": "debug",
+        "z": "19102190329d787e",
+        "name": "Normal",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "220bd6e1c292e7e2",
+        "type": "inject",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "914e23fb3e7c61b6"
+            ]
+        ]
+    },
+    {
+        "id": "914e23fb3e7c61b6",
+        "type": "random",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "802c78ae57b9c381"
+            ]
+        ]
+    },
+    {
+        "id": "802c78ae57b9c381",
+        "type": "ui-gauge",
+        "z": "7bbafb6fafdd2110",
+        "name": "Dashboar",
+        "group": "0a8e88ed54c91b25",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 640,
+        "y": 280,
+        "wires": [
+            [
+                "cc33beec43881650",
+                "331184296d452433"
+            ]
+        ]
+    },
+    {
+        "id": "cc33beec43881650",
+        "type": "ui-chart",
+        "z": "7bbafb6fafdd2110",
+        "group": "10a9e83e2a827b41",
+        "name": "",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 790,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "331184296d452433",
+        "type": "ui-gauge",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "group": "2cdf7a695f6c6590",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "6d7ffb8194d736e6"
+            ]
+        ]
+    },
+    {
+        "id": "6dbb148e0885fe85",
+        "type": "change",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "93ffe290374c0db4"
+            ]
+        ]
+    },
+    {
+        "id": "6d7ffb8194d736e6",
+        "type": "switch",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "50",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "15",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "6dbb148e0885fe85"
+            ],
+            [
+                "2650a38cb11aeeed"
+            ]
+        ]
+    },
+    {
+        "id": "2650a38cb11aeeed",
+        "type": "change",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "93ffe290374c0db4"
+            ]
+        ]
+    },
+    {
+        "id": "93ffe290374c0db4",
+        "type": "ui-led",
+        "z": "7bbafb6fafdd2110",
+        "name": "",
+        "group": "2cdf7a695f6c6590",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 830,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c100000000000001",
+        "type": "http in",
+        "z": "a100000000000002",
+        "name": "Sensor HTTP GET",
+        "url": "/sensores/:temp/:hum",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "c100000000000002",
+                "c100000000000007"
+            ]
+        ]
+    },
+    {
+        "id": "c100000000000002",
+        "type": "function",
+        "z": "a100000000000002",
+        "name": "Validar y distribuir mediciones",
+        "func": "const temp = Number(msg.req.params.temp);\nconst hum = Number(msg.req.params.hum);\nif (!Number.isFinite(temp) || !Number.isFinite(hum) || temp < -100 || temp > 150 || hum < 0 || hum > 100) {\n    msg.statusCode = 400;\n    msg.headers = { \"Content-Type\": \"text/plain; charset=utf-8\" };\n    msg.payload = \"Valores inválidos. Ejemplo: /sensores/23.8/89.7\";\n    return [msg, null, null];\n}\nconst tempMsg = { payload: temp, topic: \"sensor/temperatura\" };\nconst humMsg = { payload: hum, topic: \"sensor/humedad\" };\nmsg.temp = temp;\nmsg.hum = hum;\nmsg.statusCode = 200;\nmsg.headers = { \"Content-Type\": \"text/html; charset=utf-8\" };\nreturn [msg, tempMsg, humMsg];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 445,
+        "y": 180,
+        "wires": [
+            [
+                "c100000000000003"
+            ],
+            [
+                "c100000000000005"
+            ],
+            [
+                "c100000000000006"
+            ]
+        ]
+    },
+    {
+        "id": "c100000000000003",
+        "type": "template",
+        "z": "a100000000000002",
+        "name": "Página",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"es\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Monitoreo IoT | Servidor REST</title>\n<style>\n*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(130deg,#071326,#17476b);color:#f8fbff;font-family:Arial,sans-serif;display:grid;place-items:center;padding:22px}.panel{width:min(780px,100%);text-align:center}.eyebrow{color:#89d9ff;letter-spacing:2px;font-weight:700}h1{font-size:clamp(27px,5vw,42px);margin:10px 0}p{color:#bbcee2}.status{display:inline-block;margin:10px 0 28px;background:#153f3a;color:#a6f0c7;border:1px solid #397962;border-radius:40px;padding:9px 18px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{border:1px solid #436384;background:#1c3553;border-radius:23px;padding:30px 16px;box-shadow:0 15px 35px #0003}.ico{font-size:48px}.label{font-size:19px;color:#d5e7f8;margin:15px 0}.number{font-size:clamp(30px,6vw,55px);font-weight:800;white-space:nowrap}.temp{color:#ffb16e}.hum{color:#76ceff}footer{color:#a7bed8;margin-top:28px;font-size:13px}@media(max-width:540px){.cards{grid-template-columns:1fr}}\n</style></head><body><main class=\"panel\"><div class=\"eyebrow\">NODE-RED · API REST</div><h1>🌐 Monitoreo Ambiental IoT</h1><p>Temperatura y humedad recibidas del sensor simulado</p><div class=\"status\">● Datos recibidos correctamente</div><section class=\"cards\"><article class=\"card\"><div class=\"ico\">🌡️</div><div class=\"label\">Temperatura</div><div class=\"number temp\">{{temp}} °C</div><p>Sensor de temperatura</p></article><article class=\"card\"><div class=\"ico\">💧</div><div class=\"label\">Humedad relativa</div><div class=\"number hum\">{{hum}} %</div><p>Sensor de humedad</p></article></section><footer>Servidor REST local · Los valores cambian con cada nueva URL recibida</footer></main></body></html>",
+        "output": "str",
+        "x": 695,
+        "y": 120,
+        "wires": [
+            [
+                "c100000000000004"
+            ]
+        ]
+    },
+    {
+        "id": "c100000000000004",
+        "type": "http response",
+        "z": "a100000000000002",
+        "name": "Responder HTML",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c100000000000005",
+        "type": "ui-gauge",
+        "z": "a100000000000002",
+        "name": "Gauge - Temperatura",
+        "group": "d100000000000003",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#4da3ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#2ecc71",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "35",
+                "color": "#ff8a40",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "0",
+        "max": "50",
+        "sizeThickness": "",
+        "sizeGap": "",
+        "sizeKeyThickness": "",
+        "className": "",
+        "x": 740,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c100000000000006",
+        "type": "ui-gauge",
+        "z": "a100000000000002",
+        "name": "Gauge - Humedad",
+        "group": "d100000000000003",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humedad",
+        "alwaysShowTitle": false,
+        "units": "",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc857",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#35b0ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#1746b5",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": "",
+        "sizeGap": "",
+        "sizeKeyThickness": "",
+        "className": "",
+        "x": 735,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c100000000000007",
+        "type": "debug",
+        "z": "a100000000000002",
+        "name": "Parámetros recibidos",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "req.params",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 442,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "b100000000000001",
+        "type": "inject",
+        "z": "a100000000000001",
+        "name": "Cada 1 minuto",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "b100000000000002"
+            ]
+        ]
+    },
+    {
+        "id": "b100000000000002",
+        "type": "function",
+        "z": "a100000000000001",
+        "name": "Generar temperatura, humedad y URL",
+        "func": "const temp = (20 + Math.random() * 20).toFixed(1);\nconst hum = (40 + Math.random() * 50).toFixed(1);\nmsg.method = \"GET\";\nmsg.url = \"http://127.0.0.1:1880/sensores/\" + temp + \"/\" + hum;\nmsg.payload = { temp: Number(temp), hum: Number(hum) };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 405,
+        "y": 120,
+        "wires": [
+            [
+                "b100000000000003"
+            ]
+        ]
+    },
+    {
+        "id": "b100000000000003",
+        "type": "http request",
+        "z": "a100000000000001",
+        "name": "Solicitud HTTP al servidor",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 120,
+        "wires": [
+            [
+                "b100000000000004"
+            ]
+        ]
+    },
+    {
+        "id": "b100000000000004",
+        "type": "debug",
+        "z": "a100000000000001",
+        "name": "Estado de respuesta REST",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "statusCode",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 965,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9de543574896dc2e",
+        "type": "inject",
+        "z": "74ab8cc093354e4c",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Verde",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "776efb710d06ba11"
+            ]
+        ]
+    },
+    {
+        "id": "ea1cede88314fc63",
+        "type": "inject",
+        "z": "74ab8cc093354e4c",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Rojo",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "776efb710d06ba11"
+            ]
+        ]
+    },
+    {
+        "id": "776efb710d06ba11",
+        "type": "ui-led",
+        "z": "74ab8cc093354e4c",
+        "name": "Led",
+        "group": "0a8e88ed54c91b25",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Encendido de led",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 450,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2230dc6c49ab8631",
+        "type": "ui-button",
+        "z": "74ab8cc093354e4c",
+        "group": "c5c109f1c0b375d1",
+        "name": "",
+        "label": "Encender Led",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "global",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "ebacf633cc99bf08"
+            ]
+        ]
+    },
+    {
+        "id": "ebacf633cc99bf08",
+        "type": "ui-led",
+        "z": "74ab8cc093354e4c",
+        "name": "",
+        "group": "c5c109f1c0b375d1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Led",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 450,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cafcf50c1c0471ac",
+        "type": "ui-button",
+        "z": "74ab8cc093354e4c",
+        "group": "ebc64ad0c4387673",
+        "name": "",
+        "label": "button",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "7bcf0c7072e42b1e"
+            ]
+        ]
+    },
+    {
+        "id": "7bcf0c7072e42b1e",
+        "type": "function",
+        "z": "74ab8cc093354e4c",
+        "name": "function 1",
+        "func": "\nlet estado = context.get(\"estado\") || false;\n\nestado = !estado;\n\ncontext.set(\"estado\", estado);\n\nmsg.payload = estado;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "c5f570d408f4edd5"
+            ]
+        ]
+    },
+    {
+        "id": "c5f570d408f4edd5",
+        "type": "ui-led",
+        "z": "74ab8cc093354e4c",
+        "name": "",
+        "group": "ebc64ad0c4387673",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 510,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a65a679a9cd2bb72",
+        "type": "inject",
+        "z": "1df8f5cfd8d08c15",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "x",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "7f63664c0ad1b3a8"
+            ]
+        ]
+    },
+    {
+        "id": "db02a284fd4d72fa",
+        "type": "inject",
+        "z": "1df8f5cfd8d08c15",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "y",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "54bc55ad5f429b95"
+            ]
+        ]
+    },
+    {
+        "id": "e0d333adcdce85b7",
+        "type": "inject",
+        "z": "1df8f5cfd8d08c15",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "z",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "da55340f7ce607e3"
+            ]
+        ]
+    },
+    {
+        "id": "7f63664c0ad1b3a8",
+        "type": "random",
+        "z": "1df8f5cfd8d08c15",
+        "name": "x",
+        "low": 1,
+        "high": 10,
+        "inte": "true",
+        "property": "payload",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "977995b7b7f648d2"
+            ]
+        ]
+    },
+    {
+        "id": "54bc55ad5f429b95",
+        "type": "random",
+        "z": "1df8f5cfd8d08c15",
+        "name": "y",
+        "low": 1,
+        "high": "20",
+        "inte": "true",
+        "property": "payload",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "977995b7b7f648d2"
+            ]
+        ]
+    },
+    {
+        "id": "da55340f7ce607e3",
+        "type": "random",
+        "z": "1df8f5cfd8d08c15",
+        "name": "z",
+        "low": 1,
+        "high": "30",
+        "inte": "true",
+        "property": "payload",
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "977995b7b7f648d2"
+            ]
+        ]
+    },
+    {
+        "id": "977995b7b7f648d2",
+        "type": "ui-chart",
+        "z": "1df8f5cfd8d08c15",
+        "group": "924995533f976fe7",
+        "name": "",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 630,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da4ca2e4b164e750",
+        "type": "mqtt in",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "topic": "FIC/6A/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1c37ca378a0c2997",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "0ca5465355a96796"
+            ]
+        ]
+    },
+    {
+        "id": "0ca5465355a96796",
+        "type": "debug",
+        "z": "87e16bdb0eed5d8f",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "534b70cf719a3ccc",
+        "type": "inject",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "87a7f4f6ae2186b8"
+            ]
+        ]
+    },
+    {
+        "id": "1abebbcf92c8dcf1",
+        "type": "inject",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "FIC/6A/T2JJ:chaoo",
+        "payloadType": "str",
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "87a7f4f6ae2186b8"
+            ]
+        ]
+    },
+    {
+        "id": "562b31e56691f89c",
+        "type": "random",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 260,
+        "y": 680,
+        "wires": [
+            [
+                "573015b7c9090f4d"
+            ]
+        ]
+    },
+    {
+        "id": "573015b7c9090f4d",
+        "type": "random",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 260,
+        "y": 740,
+        "wires": [
+            [
+                "afba91eeadbc3182"
+            ]
+        ]
+    },
+    {
+        "id": "afba91eeadbc3182",
+        "type": "change",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"temp\": temp,    \"hum\": hum}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 720,
+        "wires": [
+            [
+                "04e41a2756ee40e7",
+                "87a7f4f6ae2186b8"
+            ]
+        ]
+    },
+    {
+        "id": "169859d535388ca5",
+        "type": "inject",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 700,
+        "wires": [
+            [
+                "562b31e56691f89c"
+            ]
+        ]
+    },
+    {
+        "id": "04e41a2756ee40e7",
+        "type": "debug",
+        "z": "87e16bdb0eed5d8f",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "87a7f4f6ae2186b8",
+        "type": "mqtt out",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1c37ca378a0c2997",
+        "x": 670,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "098b0701ab41569a",
+        "type": "ui-gauge",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "group": "fb5f430c0ccf50da",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 730,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0310825c19ece7fb",
+        "type": "ui-gauge",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "group": "7a754b84d8bdbc5f",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 730,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b5a8c47dbf9c814",
+        "type": "mqtt in",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "topic": "holi",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1c37ca378a0c2997",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 1020,
+        "wires": [
+            [
+                "7d1e80c6a7da2974"
+            ]
+        ]
+    },
+    {
+        "id": "7d1e80c6a7da2974",
+        "type": "json",
+        "z": "87e16bdb0eed5d8f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 1020,
+        "wires": [
+            [
+                "a0c8f51df6d07d6a",
+                "c7814a19dbc0b38a"
+            ]
+        ]
+    },
+    {
+        "id": "a0c8f51df6d07d6a",
+        "type": "function",
+        "z": "87e16bdb0eed5d8f",
+        "name": "Temperatura",
+        "func": "msg.payload = msg.payload.temp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 960,
+        "wires": [
+            [
+                "098b0701ab41569a"
+            ]
+        ]
+    },
+    {
+        "id": "c7814a19dbc0b38a",
+        "type": "function",
+        "z": "87e16bdb0eed5d8f",
+        "name": "Humedad",
+        "func": "msg.payload = msg.payload.hum;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1080,
+        "wires": [
+            [
+                "0310825c19ece7fb"
+            ]
+        ]
+    },
+    {
+        "id": "881898cff666f957",
+        "type": "inject",
+        "z": "248e0ae5d81fc89f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 480,
+        "wires": [
+            [
+                "2089acf88a972639"
+            ]
+        ]
+    },
+    {
+        "id": "2089acf88a972639",
+        "type": "http request",
+        "z": "248e0ae5d81fc89f",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://example.com",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 870,
+        "y": 480,
+        "wires": [
+            [
+                "b66c88f595f8e6e6"
+            ]
+        ]
+    },
+    {
+        "id": "b66c88f595f8e6e6",
+        "type": "debug",
+        "z": "248e0ae5d81fc89f",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f7f23ac1584df92d",
+        "type": "http response",
+        "z": "248e0ae5d81fc89f",
+        "name": "OK",
+        "statusCode": "",
+        "headers": {},
+        "x": 1190,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1effd7f103a391c3",
+        "type": "debug",
+        "z": "248e0ae5d81fc89f",
+        "name": "Server REST",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "caee9833885baf39",
+        "type": "http in",
+        "z": "248e0ae5d81fc89f",
+        "name": "",
+        "url": "/sensores/:temp/:hum",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 670,
+        "y": 640,
+        "wires": [
+            [
+                "1effd7f103a391c3",
+                "97dcdd228fc307fd"
+            ]
+        ]
+    },
+    {
+        "id": "97dcdd228fc307fd",
+        "type": "template",
+        "z": "248e0ae5d81fc89f",
+        "name": "Hola Mundo",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Monitoreo Ambiental IoT</title>\n  <style>\n    * { box-sizing: border-box; }\n\n    body {\n      margin: 0;\n      min-height: 100vh;\n      font-family: Arial, sans-serif;\n      background: linear-gradient(135deg, #101c32, #263c61);\n      color: white;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      padding: 24px;\n    }\n\n    .container {\n      width: 100%;\n      max-width: 750px;\n      text-align: center;\n    }\n\n    h1 { font-size: 32px; margin-bottom: 8px; }\n    .subtitulo { color: #aec1de; margin-bottom: 22px; }\n\n    .estado {\n      display: inline-block;\n      background: #153f35;\n      color: #83e4b1;\n      padding: 10px 18px;\n      border-radius: 30px;\n      margin-bottom: 30px;\n    }\n\n    .tarjetas {\n      display: grid;\n      grid-template-columns: repeat(2, minmax(0, 1fr));\n      gap: 20px;\n    }\n\n    .tarjeta {\n      background: #213551;\n      border: 1px solid #3a5070;\n      border-radius: 20px;\n      padding: 35px 15px;\n      box-shadow: 0 10px 30px #0003;\n    }\n\n    .icono { font-size: 45px; margin-bottom: 15px; }\n    .etiqueta { color: #c4d4ea; font-size: 17px; }\n    .valor { font-size: 42px; font-weight: bold; margin: 20px 0; }\n    .unidad { font-size: 23px; color: #b8c9dc; }\n    .temperatura { color: #ffb36b; }\n    .humedad { color: #80c9ff; }\n\n    .footer {\n      margin-top: 30px;\n      color: #a7bad3;\n      font-size: 14px;\n    }\n\n    @media (max-width: 520px) {\n      .tarjetas { grid-template-columns: 1fr; }\n      h1 { font-size: 25px; }\n    }\n  </style>\n</head>\n<body>\n  <main class=\"container\">\n    <h1>🌐 Monitoreo Ambiental IoT</h1>\n    <p class=\"subtitulo\">\n      Sistema de monitoreo mediante servidor REST\n    </p>\n\n    <div class=\"estado\">● Solicitud recibida correctamente</div>\n\n    <div class=\"tarjetas\">\n      <div class=\"tarjeta\">\n        <div class=\"icono\">🌡️</div>\n        <div class=\"etiqueta\">Temperatura</div>\n        <div class=\"valor temperatura\">\n          {{req.params.temp}} <span class=\"unidad\">°C</span>\n        </div>\n        <p>Lectura del sensor</p>\n      </div>\n\n      <div class=\"tarjeta\">\n        <div class=\"icono\">💧</div>\n        <div class=\"etiqueta\">Humedad</div>\n        <div class=\"valor humedad\">\n          {{req.params.hum}} <span class=\"unidad\">%</span>\n        </div>\n        <p>Humedad relativa</p>\n      </div>\n    </div>\n\n    <p class=\"footer\">\n      Internet de las Cosas | Node-RED | REST API\n    </p>\n  </main>\n</body>\n</html>\n",
+        "output": "str",
+        "x": 990,
+        "y": 580,
+        "wires": [
+            [
+                "f7f23ac1584df92d"
+            ]
+        ]
+    },
+    {
+        "id": "c44c899dc8f91733",
+        "type": "inject",
+        "z": "cef1b5782eb9acc5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temp\": 23.5, \"hum\": 84.4}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "e1ad8d04f0e6b108"
+            ]
+        ]
+    },
+    {
+        "id": "e1ad8d04f0e6b108",
+        "type": "http request",
+        "z": "cef1b5782eb9acc5",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://postman-echo.com/post",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 460,
+        "wires": [
+            [
+                "0d5ce10e799dec95"
+            ]
+        ]
+    },
+    {
+        "id": "0d5ce10e799dec95",
+        "type": "json",
+        "z": "cef1b5782eb9acc5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 460,
+        "wires": [
+            [
+                "6a6958d53cd24eeb"
+            ]
+        ]
+    },
+    {
+        "id": "6a6958d53cd24eeb",
+        "type": "debug",
+        "z": "cef1b5782eb9acc5",
+        "name": "cliente POST",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4cbcfc762adec92b",
+        "type": "http response",
+        "z": "cef1b5782eb9acc5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "647f17fbc6bceb49",
+        "type": "debug",
+        "z": "cef1b5782eb9acc5",
+        "name": "server POST",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "5440e1185b86eb96",
+        "type": "http request",
+        "z": "cef1b5782eb9acc5",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/sensorpost",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 230,
+        "y": 700,
+        "wires": [
+            [
+                "4cbcfc762adec92b",
+                "647f17fbc6bceb49"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000010",
+        "type": "comment",
+        "z": "f100000000000001",
+        "name": "HUMEDAD: Inject cada 1 minuto; Change con JSONata crea un valor aleatorio en %, MQTT Out lo publica.",
+        "x": 400,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f100000000000011",
+        "type": "inject",
+        "z": "f100000000000001",
+        "name": "Cada 1 minuto - Humedad",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "f100000000000012"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000012",
+        "type": "change",
+        "z": "f100000000000001",
+        "name": "Humedad aleatoria 30 - 95 %",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(30 + $random() * 65, 1)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 405,
+        "y": 100,
+        "wires": [
+            [
+                "f100000000000013",
+                "f100000000000014"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000013",
+        "type": "mqtt out",
+        "z": "f100000000000001",
+        "name": "Publicar humedad",
+        "topic": "riego/invernadero1/sensor/humedad",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f100000000000003",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f100000000000014",
+        "type": "debug",
+        "z": "f100000000000001",
+        "name": "Debug humedad",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 125,
+        "wires": []
+    },
+    {
+        "id": "f100000000000020",
+        "type": "comment",
+        "z": "f100000000000001",
+        "name": "TEMPERATURA: Inject cada 2 minutos y Change JSONata. No se utiliza Function.",
+        "x": 310,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f100000000000021",
+        "type": "inject",
+        "z": "f100000000000001",
+        "name": "Cada 2 minutos - Temperatura",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 235,
+        "wires": [
+            [
+                "f100000000000022"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000022",
+        "type": "change",
+        "z": "f100000000000001",
+        "name": "Temperatura aleatoria 18 - 42 C",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(18 + $random() * 24, 1)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 235,
+        "wires": [
+            [
+                "f100000000000023",
+                "f100000000000024"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000023",
+        "type": "mqtt out",
+        "z": "f100000000000001",
+        "name": "Publicar temperatura",
+        "topic": "riego/invernadero1/sensor/temperatura",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f100000000000003",
+        "x": 700,
+        "y": 215,
+        "wires": []
+    },
+    {
+        "id": "f100000000000024",
+        "type": "debug",
+        "z": "f100000000000001",
+        "name": "Debug temperatura",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f100000000000030",
+        "type": "comment",
+        "z": "f100000000000001",
+        "name": "ESTADO: JSON completo al iniciar. Se actualiza al recibir órdenes del dashboard por MQTT.",
+        "x": 340,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f100000000000031",
+        "type": "inject",
+        "z": "f100000000000001",
+        "name": "Estado inicial JSON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "riego/invernadero1/sistema/estado",
+        "payload": "{\"sistema\": {\"nombre\": \"Riego Inteligente\", \"ubicacion\": \"Invernadero 1\", \"estado\": {\"riego\": \"apagado\", \"alarmaTemperatura\": false, \"alarmaHumedad\": false}}}",
+        "payloadType": "json",
+        "x": 145,
+        "y": 385,
+        "wires": [
+            [
+                "f100000000000032"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000032",
+        "type": "mqtt out",
+        "z": "f100000000000001",
+        "name": "Publicar JSON estado",
+        "topic": "riego/invernadero1/sistema/estado",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f100000000000003",
+        "x": 695,
+        "y": 385,
+        "wires": []
+    },
+    {
+        "id": "f100000000000033",
+        "type": "mqtt in",
+        "z": "f100000000000001",
+        "name": "Recibir control del riego",
+        "topic": "riego/invernadero1/control/riego",
+        "qos": "1",
+        "datatype": "utf8",
+        "broker": "f100000000000003",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 145,
+        "y": 465,
+        "wires": [
+            [
+                "f100000000000034"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000034",
+        "type": "change",
+        "z": "f100000000000001",
+        "name": "Crear JSON con estado recibido",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"sistema\":{\"nombre\":\"Riego Inteligente\",\"ubicacion\":\"Invernadero 1\",\"estado\":{\"riego\": payload = \"encendido\" ? \"encendido\" : \"apagado\",\"alarmaTemperatura\":false,\"alarmaHumedad\":false}}}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 465,
+        "wires": [
+            [
+                "f100000000000032",
+                "f100000000000035"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000035",
+        "type": "debug",
+        "z": "f100000000000001",
+        "name": "Debug JSON estado",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f100000000000040",
+        "type": "comment",
+        "z": "f100000000000002",
+        "name": "RECEPCIÓN: cada MQTT In escucha su topic; los Gauge utilizan números recibidos por MQTT.",
+        "x": 410,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f100000000000041",
+        "type": "mqtt in",
+        "z": "f100000000000002",
+        "name": "Suscribir humedad",
+        "topic": "riego/invernadero1/sensor/humedad",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "f100000000000003",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 105,
+        "wires": [
+            [
+                "f100000000000090"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000042",
+        "type": "ui-gauge",
+        "z": "f100000000000002",
+        "name": "Gauge humedad",
+        "group": "f100000000000006",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "3",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humedad suelo",
+        "alwaysShowTitle": false,
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ff4242",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#f3f736",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#24c66b",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": "16",
+        "sizeGap": "2",
+        "sizeKeyThickness": "8",
+        "className": "",
+        "x": 690,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f100000000000043",
+        "type": "mqtt in",
+        "z": "f100000000000002",
+        "name": "Suscribir temperatura",
+        "topic": "riego/invernadero1/sensor/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "f100000000000003",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 170,
+        "wires": [
+            [
+                "f100000000000091"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000044",
+        "type": "ui-gauge",
+        "z": "f100000000000002",
+        "name": "Gauge temperatura",
+        "group": "f100000000000006",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperatura suelo",
+        "alwaysShowTitle": false,
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#25d451",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "25",
+                "color": "#f1f448",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "35",
+                "color": "#f50000",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": "16",
+        "sizeGap": "2",
+        "sizeKeyThickness": "8",
+        "className": "",
+        "x": 690,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f100000000000050",
+        "type": "comment",
+        "z": "f100000000000002",
+        "name": "JSON: el nodo JSON convierte texto MQTT en objeto; Change extrae cada propiedad sin usar Function.",
+        "x": 390,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f100000000000051",
+        "type": "mqtt in",
+        "z": "f100000000000002",
+        "name": "Suscribir JSON de estado",
+        "topic": "riego/invernadero1/sistema/estado",
+        "qos": "1",
+        "datatype": "utf8",
+        "broker": "f100000000000003",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 315,
+        "wires": [
+            [
+                "f100000000000052",
+                "f100000000000053"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000052",
+        "type": "json",
+        "z": "f100000000000002",
+        "name": "Interpretar JSON recibido",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 365,
+        "y": 315,
+        "wires": [
+            [
+                "f100000000000054",
+                "f100000000000055",
+                "f100000000000056",
+                "f100000000000057",
+                "f100000000000058"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000053",
+        "type": "debug",
+        "z": "f100000000000002",
+        "name": "Debug MQTT JSON recibido",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f100000000000054",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Extraer Nombre del sistema",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sistema.nombre",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 370,
+        "wires": [
+            [
+                "f100000000000060"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000060",
+        "type": "ui-text",
+        "z": "f100000000000002",
+        "group": "f100000000000006",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "name": "Texto Nombre del sistema",
+        "label": "Sistema",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#333333",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 940,
+        "y": 370,
+        "wires": []
+    },
+    {
+        "id": "f100000000000055",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Extraer Ubicacion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sistema.ubicacion",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 430,
+        "wires": [
+            [
+                "f100000000000061"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000061",
+        "type": "ui-text",
+        "z": "f100000000000002",
+        "group": "f100000000000006",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "name": "Texto Ubicacion",
+        "label": "Ubicación",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#333333",
+        "className": "",
+        "x": 940,
+        "y": 430,
+        "wires": []
+    },
+    {
+        "id": "f100000000000056",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Extraer Estado del riego",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sistema.estado.riego",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 490,
+        "wires": [
+            [
+                "f100000000000062"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000062",
+        "type": "ui-text",
+        "z": "f100000000000002",
+        "group": "f100000000000006",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "name": "Texto Estado del riego",
+        "label": "Riego",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#333333",
+        "className": "",
+        "x": 940,
+        "y": 490,
+        "wires": []
+    },
+    {
+        "id": "f100000000000057",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Extraer Alarma temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sistema.estado.alarmaTemperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 550,
+        "wires": [
+            [
+                "f100000000000063"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000063",
+        "type": "ui-text",
+        "z": "f100000000000002",
+        "group": "f100000000000006",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "name": "Texto Alarma temperatura",
+        "label": "Alarma temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#333333",
+        "className": "",
+        "x": 940,
+        "y": 550,
+        "wires": []
+    },
+    {
+        "id": "f100000000000058",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Extraer Alarma humedad",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sistema.estado.alarmaHumedad",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 610,
+        "wires": [
+            [
+                "f100000000000064"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000064",
+        "type": "ui-text",
+        "z": "f100000000000002",
+        "group": "f100000000000006",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "name": "Texto Alarma humedad",
+        "label": "Alarma humedad",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#333333",
+        "className": "",
+        "x": 940,
+        "y": 610,
+        "wires": []
+    },
+    {
+        "id": "f100000000000080",
+        "type": "comment",
+        "z": "f100000000000002",
+        "name": "CONTROL: el interruptor publica encendido/apagado; el cliente sensor lo recibe y publica JSON actualizado.",
+        "x": 430,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f100000000000081",
+        "type": "ui-switch",
+        "z": "f100000000000002",
+        "name": "Control manual del riego",
+        "label": "Encender / apagar riego",
+        "group": "f100000000000006",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "onvalue": "encendido",
+        "onvalueType": "str",
+        "onicon": "water",
+        "oncolor": "#2b8f5a",
+        "offvalue": "apagado",
+        "offvalueType": "str",
+        "officon": "water-off",
+        "offcolor": "#879995",
+        "x": 165,
+        "y": 735,
+        "wires": [
+            [
+                "f100000000000082"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000082",
+        "type": "mqtt out",
+        "z": "f100000000000002",
+        "name": "Enviar orden MQTT",
+        "topic": "riego/invernadero1/control/riego",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f100000000000003",
+        "x": 430,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f100000000000090",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Convertir lectura MQTT a número",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 365,
+        "y": 105,
+        "wires": [
+            [
+                "f100000000000042"
+            ]
+        ]
+    },
+    {
+        "id": "f100000000000091",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Convertir lectura MQTT a número",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 365,
+        "y": 170,
+        "wires": [
+            [
+                "f100000000000044"
+            ]
+        ]
+    },
+    {
+        "id": "319de1e1bcf8454f",
+        "type": "http in",
+        "z": "f100000000000002",
+        "name": "GET consumo",
+        "url": "/API/6toB/Alfonso/consumo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 690,
+        "y": 20,
+        "wires": [
+            [
+                "fe4d4f47c3df423b"
+            ]
+        ]
+    },
+    {
+        "id": "fe4d4f47c3df423b",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Crear respuesta consumo",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"sistema\":\"Monitoreo Energético\",\"consumo_kwh\":$round(1 + $random() * 14, 1),\"unidad\":\"kWh\"}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "x": 925,
+        "y": 20,
+        "wires": [
+            [
+                "3ce5e32f20db40ec"
+            ]
+        ]
+    },
+    {
+        "id": "3ce5e32f20db40ec",
+        "type": "http response",
+        "z": "f100000000000002",
+        "name": "Respuesta consumo",
+        "statusCode": "",
+        "headers": {},
+        "x": 1150,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "6aac6f254b7b467d",
+        "type": "http in",
+        "z": "f100000000000002",
+        "name": "GET ubicacion",
+        "url": "/API/6toB/Alfonso/ubicacion",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "369e6b8dcf464521"
+            ]
+        ]
+    },
+    {
+        "id": "369e6b8dcf464521",
+        "type": "change",
+        "z": "f100000000000002",
+        "name": "Crear respuesta ubicacion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"laboratorio\":\"Laboratorio de Redes\",\"bloque\":\"Bloque de Ingeniería\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "x": 925,
+        "y": 200,
+        "wires": [
+            [
+                "44e1e9d7ca164d3c"
+            ]
+        ]
+    },
+    {
+        "id": "44e1e9d7ca164d3c",
+        "type": "http response",
+        "z": "f100000000000002",
+        "name": "Respuesta ubicacion",
+        "statusCode": "",
+        "headers": {},
+        "x": 1150,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b604167a68d49e4d",
+        "type": "ui-button",
+        "z": "3eeb1b316d22c630",
+        "group": "f91d257234fb45fb",
+        "name": "Botón 1: consumo",
+        "label": "Consultar consumo energético",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "emulateClick": false,
+        "tooltip": "Consultar consumo en kWh",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "bolt",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "d8c7a11ba7854b95"
+            ]
+        ]
+    },
+    {
+        "id": "d8c7a11ba7854b95",
+        "type": "http request",
+        "z": "3eeb1b316d22c630",
+        "name": "GET consumo",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/API/6toA/Alfonso/consumo",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "e6a3d656e3a6a6f0",
+                "466e99fee13ddb2a"
+            ]
+        ]
+    },
+    {
+        "id": "e6a3d656e3a6a6f0",
+        "type": "debug",
+        "z": "3eeb1b316d22c630",
+        "name": "debug1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 565,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2cb6a95a4237ea2d",
+        "type": "ui-button",
+        "z": "3eeb1b316d22c630",
+        "group": "f91d257234fb45fb",
+        "name": "Botón 2: ubicación",
+        "label": "Consultar ubicación",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "emulateClick": false,
+        "tooltip": "Consultar laboratorio y bloque",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "map-pin",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "a3e9dc5d64d90a4d"
+            ]
+        ]
+    },
+    {
+        "id": "a3e9dc5d64d90a4d",
+        "type": "http request",
+        "z": "3eeb1b316d22c630",
+        "name": "GET ubicación",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/API/6toA/Alfonso/ubicacion",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 365,
+        "y": 220,
+        "wires": [
+            [
+                "09819135a4ed1a7e",
+                "6230fcb34b750815"
+            ]
+        ]
+    },
+    {
+        "id": "09819135a4ed1a7e",
+        "type": "debug",
+        "z": "3eeb1b316d22c630",
+        "name": "debug2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 565,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c54b3954d75f12f4",
+        "type": "comment",
+        "z": "3eeb1b316d22c630",
+        "name": "Cliente",
+        "info": "Cada botón envía una petición GET; debug1 y debug2 muestran las respuestas.",
+        "x": 325,
+        "y": 50,
+        "wires": []
+    },
+    {
+        "id": "8dfd682ec669571e",
+        "type": "ui-text",
+        "z": "3eeb1b316d22c630",
+        "group": "f91d257234fb45fb",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "Consumo energético",
+        "label": "Consumo energético",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 760,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "90b7a2cb5c984d49",
+        "type": "ui-text",
+        "z": "3eeb1b316d22c630",
+        "group": "f91d257234fb45fb",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "name": "Ubicación",
+        "label": "Ubicación",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 680,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "466e99fee13ddb2a",
+        "type": "change",
+        "z": "3eeb1b316d22c630",
+        "name": "Preparar texto consumo",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$string(payload.consumo_kwh) & \" kWh\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "reg": false,
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "8dfd682ec669571e"
+            ]
+        ]
+    },
+    {
+        "id": "6230fcb34b750815",
+        "type": "change",
+        "z": "3eeb1b316d22c630",
+        "name": "Preparar texto ubicacion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.laboratorio & \" - \" & payload.bloque",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "reg": false,
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "90b7a2cb5c984d49"
+            ]
+        ]
+    },
+    {
+        "id": "5b89a42394a39a3f",
+        "type": "http in",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Consultar consumo",
+        "url": "/API/6toA/Alfonso/consumo",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "6148143c17bb5423"
+            ]
+        ]
+    },
+    {
+        "id": "6148143c17bb5423",
+        "type": "change",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Crear consumo aleatorio",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"sistema\":\"Monitoreo Energético\",\"consumo_kwh\":$round(1+$random()*14,1),\"unidad\":\"kWh\"}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json; charset=utf-8",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 385,
+        "y": 120,
+        "wires": [
+            [
+                "7769890fe4e8ac92"
+            ]
+        ]
+    },
+    {
+        "id": "7769890fe4e8ac92",
+        "type": "http response",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Responder consumo",
+        "statusCode": "",
+        "headers": {},
+        "x": 615,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "45d5a5060e0ca795",
+        "type": "http in",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Consultar ubicación",
+        "url": "/API/6toA/Alfonso/ubicacion",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "4f61e63f6fdba31b"
+            ]
+        ]
+    },
+    {
+        "id": "4f61e63f6fdba31b",
+        "type": "change",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Crear ubicación JSON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"laboratorio\":\"Laboratorio de Redes\",\"bloque\":\"Bloque de Ingeniería\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json; charset=utf-8",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 385,
+        "y": 240,
+        "wires": [
+            [
+                "36c91cfa9c8b2556"
+            ]
+        ]
+    },
+    {
+        "id": "36c91cfa9c8b2556",
+        "type": "http response",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Responder ubicación",
+        "statusCode": "",
+        "headers": {},
+        "x": 615,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "dde1987c2770f6bf",
+        "type": "comment",
+        "z": "0c468aa1d6e8f5ac",
+        "name": "Servidor",
+        "info": "Change crea los JSON. El consumo se calcula con JSONata, sin usar Function.",
+        "x": 367,
+        "y": 50,
+        "wires": []
+    },
+    {
+        "id": "6bb6108d7976570f",
+        "type": "inject",
+        "z": "fef8c534b412dd3e",
+        "name": "Reloj del simulador",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "85fbc2f544ba6cef"
+            ]
+        ]
+    },
+    {
+        "id": "85fbc2f544ba6cef",
+        "type": "function",
+        "z": "fef8c534b412dd3e",
+        "name": "Simulador de tratamiento de aguas",
+        "func": "\nconst dt = 1 / 60; // Un segundo expresado en minutos\nconst capacidad = 3000;\n\n// Recuperar el estado anterior o crear el inicial\nlet planta = flow.get(\"planta\") || {\n    nivel: 1500,\n    caudal: 0,\n    ph: 7.8,\n    turbidez: 12,\n    bomba: true,\n    dosificacion: 50,\n    descarga: false,\n    tiempo: 0\n};\n\n// Protección automática del tanque\nif (planta.nivel >= capacidad) {\n    planta.bomba = false;\n}\n\n// Protección automática de calidad y nivel\nif (\n    planta.ph < 6.5 ||\n    planta.ph > 8.5 ||\n    planta.turbidez >= 5 ||\n    planta.nivel <= 0\n) {\n    planta.descarga = false;\n}\n\n// Caudal de entrada según el estado de la bomba\nplanta.caudal = planta.bomba ? 40 : 0;\n\n// Salida de agua del tanque\nconst salida = planta.descarga ? 25 : 0;\n\n// Balance de volumen\nplanta.nivel += (planta.caudal - salida) * dt;\nplanta.nivel = Math.max(0, Math.min(capacidad, planta.nivel));\n\n// Dosificación gradual del reactivo simulado\nconst dosis = planta.dosificacion / 100;\nconst turbidezObjetivo = 12 - 10 * dosis;\nconst phObjetivo = 7.8 - 1.2 * dosis;\n\n// Respuesta gradual de las variables\nplanta.turbidez +=\n    (turbidezObjetivo - planta.turbidez) * 0.01;\n\nplanta.ph +=\n    (phObjetivo - planta.ph) * 0.005;\n\nplanta.tiempo += 1;\n\n// Guardar el estado compartido\nflow.set(\"planta\", planta);\n\n// Publicar telemetría\nmsg.payload = {\n    dispositivo: \"A09-Planta\",\n    timestamp: new Date().toISOString(),\n    nivel: Number(planta.nivel.toFixed(2)),\n    caudal: planta.caudal,\n    ph: Number(planta.ph.toFixed(2)),\n    turbidez: Number(planta.turbidez.toFixed(2)),\n    bomba: planta.bomba,\n    dosificacion: planta.dosificacion,\n    descarga: planta.descarga\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "6ac17c320c75b21b",
+                "a036c95e328b3958",
+                "c1bb69debe960964",
+                "359752635148efb8"
+            ]
+        ]
+    },
+    {
+        "id": "6ac17c320c75b21b",
+        "type": "debug",
+        "z": "fef8c534b412dd3e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a036c95e328b3958",
+        "type": "json",
+        "z": "fef8c534b412dd3e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 420,
+        "wires": [
+            [
+                "4184cc89dd898c95"
+            ]
+        ]
+    },
+    {
+        "id": "4184cc89dd898c95",
+        "type": "mqtt out",
+        "z": "fef8c534b412dd3e",
+        "name": "Planta grupo9- Envío de datos",
+        "topic": "utm/iot/A09/telemetry/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 970,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "73bea0b45aade7bf",
+        "type": "mqtt in",
+        "z": "fef8c534b412dd3e",
+        "name": "Comandos para simulador A09",
+        "topic": "utm/iot/A09/commands/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 760,
+        "wires": [
+            [
+                "bdac845d338a1a74"
+            ]
+        ]
+    },
+    {
+        "id": "bdac845d338a1a74",
+        "type": "function",
+        "z": "fef8c534b412dd3e",
+        "name": "Aplicar comandos al simulador",
+        "func": "\nlet comando = msg.payload;\n\n// Convertir JSON recibido\nif (typeof comando === \"string\") {\n    try {\n        comando = JSON.parse(comando);\n    } catch (error) {\n        node.warn(\"JSON no válido\");\n        return null;\n    }\n}\n\nif (!comando || typeof comando !== \"object\" ||\n    Array.isArray(comando)) {\n    return null;\n}\n\n// Recuperar estado de la planta\nlet planta = flow.get(\"planta\");\n\nif (!planta) {\n    node.warn(\"Simulador todavía no inicializado\");\n    return null;\n}\n\n// Historial de comandos procesados\nlet procesados = context.get(\"comandosProcesados\") || {};\n\n// Identificar comando\nconst id = typeof comando.id === \"string\" &&\n           comando.id.trim() !== \"\"\n    ? comando.id\n    : null;\n\n// Detectar duplicados sin ejecutar nuevamente\nif (id && procesados[id]) {\n    msg.payload = {\n        id: id,\n        recibido: true,\n        aceptado: procesados[id].aceptado,\n        duplicado: true,\n        accion: procesados[id].accion,\n        valor: procesados[id].valor,\n        motivo: \"Comando duplicado: no se ejecutó nuevamente\",\n        timestamp: new Date().toISOString()\n    };\n\n    return msg;\n}\n\nlet aceptado = false;\nlet motivo = \"\";\n\n// Control de bomba\nif (comando.accion === \"bomba\") {\n    if (typeof comando.valor !== \"boolean\") {\n        motivo = \"Valor de bomba no válido\";\n    } else if (comando.valor && planta.nivel >= 3000) {\n        motivo = \"Tanque lleno. No se puede encender la bomba\";\n    } else {\n        planta.bomba = comando.valor;\n        aceptado = true;\n    }\n}\n\n// Control de dosificación\nelse if (comando.accion === \"dosificacion\") {\n    const valor = Number(comando.valor);\n\n    if (!Number.isFinite(valor) || valor < 0 || valor > 100) {\n        motivo = \"Dosificación fuera de rango\";\n    } else {\n        planta.dosificacion = valor;\n        aceptado = true;\n    }\n}\n\n// Control de descarga\nelse if (comando.accion === \"descarga\") {\n    if (typeof comando.valor !== \"boolean\") {\n        motivo = \"Valor de descarga no válido\";\n    } else if (\n        comando.valor &&\n        (\n            planta.ph < 6.5 ||\n            planta.ph > 8.5 ||\n            planta.turbidez >= 5 ||\n            planta.nivel <= 0\n        )\n    ) {\n        motivo = \"Descarga bloqueada: calidad de agua o nivel inadecuado\";\n    } else {\n        planta.descarga = comando.valor;\n        aceptado = true;\n    }\n}\n\nelse {\n    motivo = \"Comando no reconocido\";\n}\n\n// Guardar el estado si se aceptó\nif (aceptado) {\n    flow.set(\"planta\", planta);\n}\n\n// Registrar identificador para evitar duplicados\nif (id) {\n    procesados[id] = {\n        aceptado: aceptado,\n        accion: comando.accion,\n        valor: comando.valor\n    };\n\n    // Conservar únicamente los últimos 200 comandos\n    const ids = Object.keys(procesados);\n\n    if (ids.length > 200) {\n        delete procesados[ids[0]];\n    }\n\n    context.set(\"comandosProcesados\", procesados);\n}\n\n// Respuesta ACK\nmsg.payload = {\n    id: id,\n    recibido: true,\n    aceptado: aceptado,\n    duplicado: false,\n    accion: comando.accion,\n    valor: comando.valor,\n    motivo: aceptado ? \"Comando ejecutado\" : motivo,\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "3f09016af496d4f1"
+            ]
+        ]
+    },
+    {
+        "id": "3f09016af496d4f1",
+        "type": "json",
+        "z": "fef8c534b412dd3e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "1fc20591d7b744b8"
+            ]
+        ]
+    },
+    {
+        "id": "1fc20591d7b744b8",
+        "type": "mqtt out",
+        "z": "fef8c534b412dd3e",
+        "name": "Confirmación de comandos A09",
+        "topic": "utm/iot/A09/ack/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 1070,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "71a188c633a24945",
+        "type": "inject",
+        "z": "fef8c534b412dd3e",
+        "name": "Prueba encender bomba",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":\"A09-DUP-004\",\"accion\":\"bomba\",\"valor\":false}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "94e17d78dca6a12f"
+            ]
+        ]
+    },
+    {
+        "id": "94e17d78dca6a12f",
+        "type": "mqtt out",
+        "z": "fef8c534b412dd3e",
+        "name": "Enviar prueba de bomba",
+        "topic": "utm/iot/A09/commands/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 550,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "d3f7ad04a1d56ad8",
+        "type": "inject",
+        "z": "fef8c534b412dd3e",
+        "name": "Prueba dosificación",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"accion\":\"dosificacion\",\"valor\":80}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "94e17d78dca6a12f"
+            ]
+        ]
+    },
+    {
+        "id": "c14fd4226bce9338",
+        "type": "inject",
+        "z": "fef8c534b412dd3e",
+        "name": "Prueba detener descarga",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"accion\":\"descarga\",\"valor\":false}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 1080,
+        "wires": [
+            [
+                "94e17d78dca6a12f"
+            ]
+        ]
+    },
+    {
+        "id": "c1bb69debe960964",
+        "type": "function",
+        "z": "fef8c534b412dd3e",
+        "name": "Detectar alarmas de planta",
+        "func": "\nconst datos = msg.payload;\nconst ahora = new Date().toISOString();\n\nconst condiciones = [\n    {\n        codigo: \"ALM-PH\",\n        mensaje: \"pH fuera de rango\",\n        severidad: \"Alta\",\n        activa: datos.ph < 6.5 || datos.ph > 8.5\n    },\n    {\n        codigo: \"ALM-TURB\",\n        mensaje: \"Turbidez elevada\",\n        severidad: \"Media\",\n        activa: datos.turbidez >= 5\n    },\n    {\n        codigo: \"ALM-NIVEL\",\n        mensaje: \"Tanque lleno: riesgo de desbordamiento\",\n        severidad: \"Critica\",\n        activa: datos.nivel >= 3000\n    }\n];\n\nconst anteriores = context.get(\"alarmasEstado\") || {};\nconst eventos = [];\n\nfor (const alarma of condiciones) {\n    const estabaActiva = anteriores[alarma.codigo] === true;\n\n    if (alarma.activa !== estabaActiva) {\n        eventos.push({\n            dispositivo: \"A09-Planta\",\n            codigo: alarma.codigo,\n            mensaje: alarma.mensaje,\n            severidad: alarma.severidad,\n            estado: alarma.activa ? \"ACTIVA\" : \"RECUPERADA\",\n            timestamp: ahora,\n            reconocida: false\n        });\n    }\n\n    anteriores[alarma.codigo] = alarma.activa;\n}\n\ncontext.set(\"alarmasEstado\", anteriores);\n\nif (eventos.length === 0) {\n    return null;\n}\n\nmsg.payload = {\n    dispositivo: \"A09-Planta\",\n    timestamp: ahora,\n    eventos: eventos,\n    total: eventos.length\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 580,
+        "wires": [
+            [
+                "a597ea25f28242af",
+                "56a088088b0bd95a"
+            ]
+        ]
+    },
+    {
+        "id": "a597ea25f28242af",
+        "type": "debug",
+        "z": "fef8c534b412dd3e",
+        "name": "Alarmas detectadas",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "56a088088b0bd95a",
+        "type": "json",
+        "z": "fef8c534b412dd3e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 850,
+        "y": 640,
+        "wires": [
+            [
+                "66e4b5e2d9fb3e61"
+            ]
+        ]
+    },
+    {
+        "id": "66e4b5e2d9fb3e61",
+        "type": "mqtt out",
+        "z": "fef8c534b412dd3e",
+        "name": "Publicar alarmas A09",
+        "topic": "utm/iot/A09/alarms/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 1080,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "359752635148efb8",
+        "type": "change",
+        "z": "fef8c534b412dd3e",
+        "name": "Preparar estado de planta A09",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t  \"dispositivo\": \"A09-Planta\",\t  \"timestamp\": payload.timestamp,\t  \"estado\": payload.nivel >= 3000 ? \"TANQUE LLENO\" :\t    ((payload.ph < 6.5 or payload.ph > 8.5 or payload.turbidez >= 5) ? \"ALERTA\" : \"OPERATIVA\"),\t  \"bomba\": payload.bomba,\t  \"descarga\": payload.descarga\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 280,
+        "wires": [
+            [
+                "7de2caabd910d48a"
+            ]
+        ]
+    },
+    {
+        "id": "7de2caabd910d48a",
+        "type": "mqtt out",
+        "z": "fef8c534b412dd3e",
+        "name": "Publicar estado A09",
+        "topic": "utm/iot/A09/status/grupo9",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 1100,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "36f9e8a8b52158d6",
+        "type": "mqtt in",
+        "z": "17c8b03b530cf953",
+        "name": "Recibir datos Planta Grupo 9",
+        "topic": "utm/iot/A09/telemetry/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "c6321f0cc7627509"
+            ]
+        ]
+    },
+    {
+        "id": "c6321f0cc7627509",
+        "type": "debug",
+        "z": "17c8b03b530cf953",
+        "name": "Datos recibidos por MQTT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2689596edc23fdf7",
+        "type": "mqtt in",
+        "z": "17c8b03b530cf953",
+        "name": "Recibir estado A09",
+        "topic": "utm/iot/A09/status/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "611fe2ba9f87e08c"
+            ]
+        ]
+    },
+    {
+        "id": "611fe2ba9f87e08c",
+        "type": "debug",
+        "z": "17c8b03b530cf953",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3ce846205732bff4",
+        "type": "mqtt in",
+        "z": "d03eb7c19bb59125",
+        "name": "Datos para Dashboard A09",
+        "topic": "utm/iot/A09/telemetry/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "bf540b63360cb616",
+                "4489ef7f8e0ad399"
+            ]
+        ]
+    },
+    {
+        "id": "bf540b63360cb616",
+        "type": "debug",
+        "z": "d03eb7c19bb59125",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4489ef7f8e0ad399",
+        "type": "ui-template",
+        "z": "d03eb7c19bb59125",
+        "group": "01eaef5ba49512dd",
+        "page": "",
+        "ui": "",
+        "name": "Panel Industrial - Grupo 9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div class=\"planta-a09\">\n    <h2>Grupo 9 Planta de Tratamiento de Aguas</h2>\n    <p class=\"subtitulo\">Grupo 9 | Monitoreo Industrial A09</p>\n\n    <!-- VARIABLES PRINCIPALES -->\n    <div class=\"indicadores\">\n      <div class=\"indicador\">\n        <span>Nivel del tanque</span>\n        <strong>{{ Number(datos.nivel).toFixed(2) }} L</strong>\n        <small>Capacidad: 3000 L</small>\n      </div>\n\n      <div class=\"indicador\">\n        <span>Caudal</span>\n        <strong>{{ datos.caudal }} L/min</strong>\n        <small>Caudal de entrada</small>\n      </div>\n\n      <div class=\"indicador\">\n        <span>pH del agua</span>\n        <strong>{{ Number(datos.ph).toFixed(2) }}</strong>\n        <small>Rango: 6.5 - 8.5</small>\n      </div>\n\n      <div class=\"indicador\">\n        <span>Turbidez</span>\n        <strong>{{ Number(datos.turbidez).toFixed(2) }} NTU</strong>\n        <small>Objetivo: menor a 5 NTU</small>\n      </div>\n    </div>\n\n    <!-- CINCO KPI -->\n    <div class=\"zona-kpi\">\n      <h3>Indicadores KPI de la planta</h3>\n\n      <div class=\"indicadores-kpi\">\n        <div class=\"indicador\">\n          <span>Volumen tratado</span>\n          <strong>{{ kpi.volumenTratado }} m³</strong>\n        </div>\n\n        <div class=\"indicador\">\n          <span>Tiempo en especificación</span>\n          <strong>{{ kpi.tiempoEspecificacion }} %</strong>\n        </div>\n\n        <div class=\"indicador\">\n          <span>Consumo de reactivo</span>\n          <strong>{{ kpi.consumoReactivo }} L</strong>\n        </div>\n\n        <div class=\"indicador\">\n          <span>Tiempo de proceso</span>\n          <strong>{{ kpi.tiempoProceso }} min</strong>\n        </div>\n\n        <div class=\"indicador\">\n          <span>Disponibilidad provisional</span>\n          <strong>{{ kpi.disponibilidad }} %</strong>\n        </div>\n      </div>\n    </div>\n\n    <!-- GRAFICOS HISTORICOS -->\n    <div class=\"zona-historicos\">\n      <h3>Gráficos históricos de la planta</h3>\n\n      <div class=\"selector-tiempo\">\n        <label>Ventana de visualización:</label>\n\n        <select v-model.number=\"ventanaMinutos\">\n          <option :value=\"5\">Últimos 5 minutos</option>\n          <option :value=\"15\">Últimos 15 minutos</option>\n          <option :value=\"30\">Últimos 30 minutos</option>\n          <option :value=\"60\">Últimos 60 minutos</option>\n        </select>\n      </div>\n\n      <p class=\"contador-historico\">\n        Muestras visibles: {{ muestrasVisibles.length }}\n      </p>\n\n      <!-- GRAFICO 1 -->\n      <div class=\"grafico-a09\">\n        <h4>Histórico de nivel y caudal</h4>\n\n        <div class=\"leyenda\">\n          <span class=\"leyenda-nivel\">● Nivel (L)</span>\n          <span class=\"leyenda-caudal\">● Caudal (L/min)</span>\n        </div>\n\n        <div v-if=\"muestrasVisibles.length > 0\">\n          <svg\n            viewBox=\"0 0 100 100\"\n            preserveAspectRatio=\"none\"\n            class=\"grafico-svg\">\n\n            <line\n              v-for=\"n in 5\"\n              :key=\"'g1-' + n\"\n              x1=\"0\"\n              :y1=\"n * 20 - 20\"\n              x2=\"100\"\n              :y2=\"n * 20 - 20\"\n              stroke=\"#475569\"\n              stroke-width=\"0.35\"\n              stroke-dasharray=\"2 2\"\n            />\n\n            <polyline\n              :points=\"puntosNivel\"\n              fill=\"none\"\n              stroke=\"#38bdf8\"\n              stroke-width=\"1\"\n              vector-effect=\"non-scaling-stroke\"\n            />\n\n            <polyline\n              :points=\"puntosCaudal\"\n              fill=\"none\"\n              stroke=\"#fbbf24\"\n              stroke-width=\"1\"\n              vector-effect=\"non-scaling-stroke\"\n            />\n          </svg>\n\n          <div class=\"etiquetas-grafico\">\n            <span>{{ horaInicial }}</span>\n            <span>{{ horaFinal }}</span>\n          </div>\n\n          <div class=\"resumen-grafico\">\n            <span>Nivel: {{ datos.nivel }} L</span>\n            <span>Caudal: {{ datos.caudal }} L/min</span>\n          </div>\n        </div>\n\n        <p v-else class=\"sin-datos\">\n          Recibiendo muestras históricas...\n        </p>\n      </div>\n\n      <!-- GRAFICO 2 -->\n      <div class=\"grafico-a09\">\n        <h4>Histórico de pH y turbidez</h4>\n\n        <div class=\"leyenda\">\n          <span class=\"leyenda-ph\">● pH</span>\n          <span class=\"leyenda-turbidez\">● Turbidez (NTU)</span>\n        </div>\n\n        <div v-if=\"muestrasVisibles.length > 0\">\n          <svg\n            viewBox=\"0 0 100 100\"\n            preserveAspectRatio=\"none\"\n            class=\"grafico-svg\">\n\n            <line\n              v-for=\"n in 5\"\n              :key=\"'g2-' + n\"\n              x1=\"0\"\n              :y1=\"n * 20 - 20\"\n              x2=\"100\"\n              :y2=\"n * 20 - 20\"\n              stroke=\"#475569\"\n              stroke-width=\"0.35\"\n              stroke-dasharray=\"2 2\"\n            />\n\n            <polyline\n              :points=\"puntosPH\"\n              fill=\"none\"\n              stroke=\"#4ade80\"\n              stroke-width=\"1\"\n              vector-effect=\"non-scaling-stroke\"\n            />\n\n            <polyline\n              :points=\"puntosTurbidez\"\n              fill=\"none\"\n              stroke=\"#fb7185\"\n              stroke-width=\"1\"\n              vector-effect=\"non-scaling-stroke\"\n            />\n          </svg>\n\n          <div class=\"etiquetas-grafico\">\n            <span>{{ horaInicial }}</span>\n            <span>{{ horaFinal }}</span>\n          </div>\n\n          <div class=\"resumen-grafico\">\n            <span>pH: {{ datos.ph }}</span>\n            <span>Turbidez: {{ datos.turbidez }} NTU</span>\n          </div>\n        </div>\n\n        <p v-else class=\"sin-datos\">\n          Recibiendo muestras históricas...\n        </p>\n      </div>\n\n      <p class=\"nota-graficos\">\n        Cada variable se escala por separado para visualizar\n        su tendencia. Las líneas no comparten escala vertical.\n      </p>\n    </div>\n\n    <!-- TANQUE -->\n    <div class=\"zona-tanque\">\n      <h3>Tanque de tratamiento</h3>\n\n      <div class=\"tanque\">\n        <div\n          class=\"agua\"\n          :style=\"{\n            height: Math.max(0, Math.min(100,\n              datos.nivel / 3000 * 100)) + '%'\n          }\">\n        </div>\n      </div>\n\n      <p>{{ (datos.nivel / 3000 * 100).toFixed(1) }} % lleno</p>\n      <p>Bomba: {{ datos.bomba ? 'Encendida' : 'Apagada' }}</p>\n      <p>Dosificación: {{ datos.dosificacion }} %</p>\n      <p>Descarga: {{ datos.descarga ? 'Activa' : 'Inactiva' }}</p>\n    </div>\n\n    <!-- CONTROLES -->\n    <div class=\"controles-a09\">\n      <h3>Panel de control de la planta</h3>\n\n      <div class=\"botones-a09\">\n        <button @click=\"enviarComando('bomba', true)\">\n          Encender bomba\n        </button>\n\n        <button @click=\"enviarComando('bomba', false)\">\n          Apagar bomba\n        </button>\n\n        <button @click=\"enviarComando('descarga', true)\">\n          Iniciar descarga\n        </button>\n\n        <button @click=\"enviarComando('descarga', false)\">\n          Detener descarga\n        </button>\n      </div>\n\n      <div class=\"dosis-a09\">\n        <label>Dosificación: {{ dosisSeleccionada }} %</label>\n\n        <input\n          type=\"range\"\n          min=\"0\"\n          max=\"100\"\n          v-model.number=\"dosisSeleccionada\"\n        >\n\n        <button\n          @click=\"enviarComando('dosificacion', dosisSeleccionada)\">\n          Aplicar dosificación\n        </button>\n      </div>\n\n      <p class=\"nota-control\">\n        Los cambios se reflejan al recibir la telemetría MQTT.\n      </p>\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      dosisSeleccionada: 50,\n      ventanaMinutos: 5,\n      historicos: [],\n      ahoraHistorico: Date.now(),\n\n      datos: {\n        nivel: 0,\n        caudal: 0,\n        ph: 7,\n        turbidez: 0,\n        bomba: false,\n        dosificacion: 0,\n        descarga: false\n      },\n\n      kpi: {\n        volumenTratado: 0,\n        tiempoEspecificacion: 0,\n        consumoReactivo: 0,\n        tiempoProceso: 0,\n        disponibilidad: 0\n      }\n    };\n  },\n\n  computed: {\n    muestrasVisibles() {\n      const limite =\n        this.ahoraHistorico - this.ventanaMinutos * 60000;\n\n      return this.historicos.filter(m =>\n        Date.parse(m.timestamp) >= limite\n      );\n    },\n\n    horaInicial() {\n      if (!this.muestrasVisibles.length) return \"--:--\";\n\n      return new Date(\n        this.muestrasVisibles[0].timestamp\n      ).toLocaleTimeString();\n    },\n\n    horaFinal() {\n      if (!this.muestrasVisibles.length) return \"--:--\";\n\n      return new Date(\n        this.muestrasVisibles[\n          this.muestrasVisibles.length - 1\n        ].timestamp\n      ).toLocaleTimeString();\n    },\n\n    puntosNivel() {\n      return this.generarPuntos(\"nivel\", 0, 3000);\n    },\n\n    puntosCaudal() {\n      return this.generarPuntos(\"caudal\", 0, 50);\n    },\n\n    puntosPH() {\n      return this.generarPuntos(\"ph\", 0, 14);\n    },\n\n    puntosTurbidez() {\n      return this.generarPuntos(\"turbidez\", 0, 15);\n    }\n  },\n\n  methods: {\n    enviarComando(accion, valor) {\n      const comando = {\n        id: \"A09-\" + Date.now() + \"-\" +\n          Math.random().toString(36).slice(2, 8),\n        accion: accion,\n        valor: valor,\n        timestamp: new Date().toISOString()\n      };\n\n      this.send({\n        payload: JSON.stringify(comando)\n      });\n    },\n\n    generarPuntos(variable, minimo, maximo) {\n      const muestras = this.muestrasVisibles;\n      if (!muestras.length) return \"\";\n\n      const primerTiempo = Date.parse(muestras[0].timestamp);\n      const ultimoTiempo = Date.parse(muestras[muestras.length - 1].timestamp);\n      const duracion = Math.max(1, ultimoTiempo - primerTiempo);\n\n      return muestras.map((m, indice) => {\n        const tiempo = Date.parse(m.timestamp);\n        const x = muestras.length === 1\n          ? 50\n          : Math.max(0, Math.min(100,\n              (tiempo - primerTiempo) / duracion * 100\n            ));\n\n        const valor = Number(m[variable]);\n        const y = 100 - Math.max(0, Math.min(100,\n          (valor - minimo) / (maximo - minimo) * 100\n        ));\n\n        return x.toFixed(2) + \",\" + y.toFixed(2);\n      }).join(\" \");\n    },\n\n    registrarMuestra(muestra) {\n      if (!muestra ||\n          !Number.isFinite(Date.parse(muestra.timestamp))) {\n        return;\n      }\n\n      for (const campo of [\"nivel\", \"caudal\", \"ph\", \"turbidez\"]) {\n        if (!Number.isFinite(Number(muestra[campo]))) {\n          return;\n        }\n      }\n\n      const tiempo = Date.parse(muestra.timestamp);\n\n      const existe = this.historicos.some(m =>\n        m.timestamp === muestra.timestamp\n      );\n\n      if (existe) return;\n\n      const nuevaMuestra = {\n        timestamp: muestra.timestamp,\n        nivel: Number(muestra.nivel),\n        caudal: Number(muestra.caudal),\n        ph: Number(muestra.ph),\n        turbidez: Number(muestra.turbidez)\n      };\n\n      this.historicos.push(nuevaMuestra);\n\n      this.historicos.sort((a, b) =>\n        Date.parse(a.timestamp) - Date.parse(b.timestamp)\n      );\n\n      const limite = Date.now() - 3600000;\n\n      this.historicos = this.historicos\n        .filter(m => Date.parse(m.timestamp) >= limite)\n        .slice(-720);\n\n      this.ahoraHistorico = Date.now();\n    }\n  },\n\n  watch: {\n    msg: {\n      handler(m) {\n        if (!m || !m.payload) return;\n\n        try {\n          const p = typeof m.payload === \"string\"\n            ? JSON.parse(m.payload)\n            : m.payload;\n\n          if (!p || typeof p !== \"object\") return;\n\n          // TELEMETRIA\n          if (\n            p.nivel !== undefined &&\n            Number.isFinite(Number(p.nivel))\n          ) {\n            this.datos = {\n              ...this.datos,\n              ...p\n            };\n          }\n\n          // CINCO KPI\n          if (p.volumenTratado !== undefined) {\n            this.kpi = {\n              ...this.kpi,\n              volumenTratado: p.volumenTratado,\n              tiempoEspecificacion: p.tiempoEspecificacion,\n              consumoReactivo: p.consumoReactivo,\n              tiempoProceso: p.tiempoProceso,\n              disponibilidad: p.disponibilidad\n            };\n          }\n\n          // HISTORICOS MQTT\n          if (p.ultimaMuestra) {\n            this.registrarMuestra(p.ultimaMuestra);\n          }\n\n        } catch (e) {\n          console.warn(\"Mensaje MQTT no válido\", e);\n        }\n      },\n      immediate: true\n    }\n  }\n}\n</script>\n\n<style>\n.planta-a09 {\n  background: #0f172a;\n  color: white;\n  padding: 24px;\n  border-radius: 16px;\n  font-family: Arial, sans-serif;\n}\n\n.planta-a09 h2 {\n  text-align: center;\n  color: #38bdf8;\n  font-size: 25px;\n}\n\n.subtitulo {\n  text-align: center;\n  color: #94a3b8;\n  margin-bottom: 24px;\n}\n\n.indicadores,\n.indicadores-kpi {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 14px;\n}\n\n.indicador {\n  background: #1e293b;\n  padding: 18px;\n  border-radius: 12px;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.indicador span {\n  color: #cbd5e1;\n}\n\n.indicador strong {\n  color: #38bdf8;\n  font-size: 24px;\n}\n\n.indicador small {\n  color: #94a3b8;\n}\n\n.zona-kpi,\n.zona-historicos,\n.zona-tanque,\n.controles-a09 {\n  background: #1e293b;\n  padding: 20px;\n  border-radius: 12px;\n  margin-top: 20px;\n}\n\n.zona-kpi h3,\n.zona-historicos h3,\n.zona-tanque h3,\n.controles-a09 h3 {\n  text-align: center;\n  margin-bottom: 20px;\n}\n\n.zona-kpi .indicador {\n  background: #334155;\n}\n\n/* HISTORICOS */\n.selector-tiempo {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 12px;\n  flex-wrap: wrap;\n}\n\n.selector-tiempo select {\n  background: #334155;\n  color: white;\n  padding: 10px;\n  border: 1px solid #64748b;\n  border-radius: 8px;\n}\n\n.contador-historico {\n  text-align: center;\n  color: #94a3b8;\n  font-size: 13px;\n  margin: 15px 0;\n}\n\n.grafico-a09 {\n  background: #0f172a;\n  border-radius: 12px;\n  padding: 18px;\n  margin-top: 16px;\n}\n\n.grafico-a09 h4 {\n  text-align: center;\n  margin-bottom: 15px;\n}\n\n.leyenda {\n  display: flex;\n  justify-content: center;\n  gap: 22px;\n  margin-bottom: 14px;\n  flex-wrap: wrap;\n  font-size: 13px;\n}\n\n.leyenda-nivel { color: #38bdf8; }\n.leyenda-caudal { color: #fbbf24; }\n.leyenda-ph { color: #4ade80; }\n.leyenda-turbidez { color: #fb7185; }\n\n.grafico-svg {\n  width: 100%;\n  height: 230px;\n  background: #17243a;\n  border: 1px solid #334155;\n  border-radius: 8px;\n  display: block;\n}\n\n.etiquetas-grafico,\n.resumen-grafico {\n  display: flex;\n  justify-content: space-between;\n  gap: 10px;\n  color: #cbd5e1;\n  font-size: 12px;\n  margin-top: 10px;\n  flex-wrap: wrap;\n}\n\n.sin-datos,\n.nota-graficos {\n  text-align: center;\n  color: #94a3b8;\n  font-size: 12px;\n  padding: 10px;\n}\n\n/* TANQUE */\n.zona-tanque {\n  text-align: center;\n}\n\n.tanque {\n  width: 150px;\n  height: 240px;\n  border: 5px solid #94a3b8;\n  border-radius: 12px;\n  margin: 20px auto;\n  position: relative;\n  overflow: hidden;\n  background: #334155;\n}\n\n.agua {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  background: linear-gradient(#38bdf8, #0284c7);\n  transition: height 1s linear;\n}\n\n/* CONTROLES */\n.controles-a09 {\n  text-align: center;\n}\n\n.botones-a09 {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.controles-a09 button {\n  padding: 12px;\n  background: #0284c7;\n  border: none;\n  border-radius: 8px;\n  color: white;\n  font-weight: bold;\n  cursor: pointer;\n}\n\n.controles-a09 button:hover {\n  background: #0369a1;\n}\n\n.dosis-a09 {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-top: 22px;\n}\n\n.dosis-a09 input {\n  width: 100%;\n  accent-color: #38bdf8;\n}\n\n.nota-control {\n  color: #94a3b8;\n  font-size: 12px;\n  margin-top: 16px;\n}\n\n@media (max-width: 600px) {\n  .indicadores,\n  .indicadores-kpi,\n  .botones-a09 {\n    grid-template-columns: 1fr;\n  }\n\n  .planta-a09 {\n    padding: 14px;\n  }\n\n  .grafico-svg {\n    height: 180px;\n  }\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "b8677561e30c1d9f"
+            ]
+        ]
+    },
+    {
+        "id": "b8677561e30c1d9f",
+        "type": "mqtt out",
+        "z": "d03eb7c19bb59125",
+        "name": "Comandos desde Dashboard A09",
+        "topic": "utm/iot/A09/commands/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 980,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "09f0c9d9ea9c485e",
+        "type": "mqtt in",
+        "z": "d03eb7c19bb59125",
+        "name": "Recibir KPI para Dashboard",
+        "topic": "utm/iot/A09/kpi/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "4489ef7f8e0ad399"
+            ]
+        ]
+    },
+    {
+        "id": "2ad9ee650a578151",
+        "type": "mqtt in",
+        "z": "d03eb7c19bb59125",
+        "name": "Recibir históricos Dashboard A09",
+        "topic": "utm/iot/A09/historicos/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "4489ef7f8e0ad399"
+            ]
+        ]
+    },
+    {
+        "id": "bf2dde10f4dd8189",
+        "type": "mqtt in",
+        "z": "9ee932ce78095ba9",
+        "name": "Recibir comandos Grupo 9",
+        "topic": "utm/iot/A09/commands/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 120,
+        "wires": [
+            [
+                "2a3528b395123424"
+            ]
+        ]
+    },
+    {
+        "id": "fce0816a3964c878",
+        "type": "debug",
+        "z": "9ee932ce78095ba9",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2a3528b395123424",
+        "type": "function",
+        "z": "9ee932ce78095ba9",
+        "name": "Procesar comandos de planta",
+        "func": "let comando = msg.payload;\n\nif (typeof comando === \"string\") {\n    try {\n        comando = JSON.parse(comando);\n    } catch (error) {\n        node.warn(\"Comando JSON no válido\");\n        return null;\n    }\n}\n\nif (!comando || typeof comando !== \"object\") {\n    return null;\n}\n\n// Preparar el comando para el simulador\nmsg.payload = comando;\nmsg.topic = \"control_planta_a09\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 120,
+        "wires": [
+            [
+                "fce0816a3964c878"
+            ]
+        ]
+    },
+    {
+        "id": "537da40bec1a4a44",
+        "type": "mqtt in",
+        "z": "9ee932ce78095ba9",
+        "name": "Recibir confirmación 09",
+        "topic": "utm/iot/A09/ack/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "b90967d15347c38e"
+            ]
+        ]
+    },
+    {
+        "id": "b90967d15347c38e",
+        "type": "debug",
+        "z": "9ee932ce78095ba9",
+        "name": "Confirmaciones ACK",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "df84b161b21055eb",
+        "type": "mqtt in",
+        "z": "9ee932ce78095ba9",
+        "name": "Recibir alarmas A09",
+        "topic": "utm/iot/A09/alarms/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "35328528f28831b8"
+            ]
+        ]
+    },
+    {
+        "id": "7204cbf9e611c3b6",
+        "type": "debug",
+        "z": "9ee932ce78095ba9",
+        "name": "Eventos de alarmas MQTT",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "35328528f28831b8",
+        "type": "function",
+        "z": "9ee932ce78095ba9",
+        "name": "Registrar historial de alarmas",
+        "func": "let datos = msg.payload;\n\nif (typeof datos === \"string\") {\n    try {\n        datos = JSON.parse(datos);\n    } catch (error) {\n        node.warn(\"Mensaje de alarma no válido\");\n        return null;\n    }\n}\n\nif (!datos || !Array.isArray(datos.eventos)) {\n    return null;\n}\n\nlet historial = flow.get(\"historialAlarmas\") || [];\n\nfor (const evento of datos.eventos) {\n    historial.push({\n        codigo: evento.codigo,\n        mensaje: evento.mensaje,\n        severidad: evento.severidad,\n        estado: evento.estado,\n        timestamp: evento.timestamp,\n        reconocida: evento.reconocida === true\n    });\n}\n\n// Conservar los últimos 200 eventos\nif (historial.length > 200) {\n    historial = historial.slice(-200);\n}\n\nflow.set(\"historialAlarmas\", historial);\n\nmsg.payload = {\n    eventosRecibidos: datos.eventos.length,\n    totalRegistrados: historial.length,\n    ultimoEvento: historial[historial.length - 1] || null\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "7204cbf9e611c3b6"
+            ]
+        ]
+    },
+    {
+        "id": "6564f2a989f98a97",
+        "type": "inject",
+        "z": "9ee932ce78095ba9",
+        "name": "Ver historial de alarmas",
+        "props": [
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 540,
+        "wires": [
+            [
+                "334abe42ea108d9e"
+            ]
+        ]
+    },
+    {
+        "id": "334abe42ea108d9e",
+        "type": "function",
+        "z": "9ee932ce78095ba9",
+        "name": "Consultar historial de alarmas",
+        "func": "\nlet historial = flow.get(\"historialAlarmas\") || [];\n\nmsg.payload = {\n    total: historial.length,\n    historial: historial\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 540,
+        "wires": [
+            [
+                "d33342bbc466a702"
+            ]
+        ]
+    },
+    {
+        "id": "d33342bbc466a702",
+        "type": "debug",
+        "z": "9ee932ce78095ba9",
+        "name": "Historial completo A09",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d074adee468e0bb7",
+        "type": "inject",
+        "z": "9ee932ce78095ba9",
+        "name": "Reconocer alarma de turbidez",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"codigo\":\"ALM-TURB\"}",
+        "payloadType": "json",
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "7971a7bf12f99582"
+            ]
+        ]
+    },
+    {
+        "id": "7971a7bf12f99582",
+        "type": "function",
+        "z": "9ee932ce78095ba9",
+        "name": "Procesar reconocimiento",
+        "func": "const codigo = msg.payload.codigo;\nlet historial = flow.get(\"historialAlarmas\") || [];\n\nlet encontrados = 0;\n\nfor (let evento of historial) {\n    if (evento.codigo === codigo &&\n        evento.reconocida === false) {\n        evento.reconocida = true;\n        evento.fechaReconocimiento =\n            new Date().toISOString();\n        encontrados++;\n    }\n}\n\nflow.set(\"historialAlarmas\", historial);\n\nmsg.payload = {\n    codigo: codigo,\n    reconocidos: encontrados,\n    mensaje: encontrados > 0\n        ? \"Alarma reconocida correctamente\"\n        : \"No hay alarmas pendientes de reconocimiento\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 660,
+        "wires": [
+            [
+                "2f10df819b7397db"
+            ]
+        ]
+    },
+    {
+        "id": "2f10df819b7397db",
+        "type": "debug",
+        "z": "9ee932ce78095ba9",
+        "name": "Confirmación de reconocimiento",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2a886b07c28178d2",
+        "type": "mqtt in",
+        "z": "f8e8a5680da7ae29",
+        "name": "Recibir datos para KPI",
+        "topic": "utm/iot/A09/telemetry/grupo9",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4c1379c5b553b0e5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 220,
+        "wires": [
+            [
+                "2286fbff2e83a553",
+                "a9d535f027f960af"
+            ]
+        ]
+    },
+    {
+        "id": "2286fbff2e83a553",
+        "type": "function",
+        "z": "f8e8a5680da7ae29",
+        "name": "Calcular indicadores KPI",
+        "func": "\nlet datos = msg.payload;\n\n// Convertir JSON si llega como texto\nif (typeof datos === \"string\") {\n    try {\n        datos = JSON.parse(datos);\n    } catch (error) {\n        node.warn(\"KPI: JSON no válido\");\n        return null;\n    }\n}\n\n// Validar datos recibidos\nif (!datos || !Number.isFinite(Number(datos.nivel))) {\n    node.warn(\"KPI: datos de planta no válidos\");\n    return null;\n}\n\n// Recuperar indicadores guardados\nlet kpi = context.get(\"kpi\") || {\n    volumenTratado: 0,\n    tiempoEspecificacion: 0,\n    consumoReactivo: 0,\n    tiempoProceso: 0,\n    tiempoDisponible: 0,\n    muestras: 0,\n    ultimoTimestamp: null\n};\n\n// Validar fecha\nconst ahora = Date.parse(datos.timestamp);\n\nif (!Number.isFinite(ahora)) {\n    node.warn(\"KPI: timestamp no válido\");\n    return null;\n}\n\n// Calcular segundos transcurridos\nlet segundos = 0;\n\nif (kpi.ultimoTimestamp !== null) {\n    segundos = (ahora - kpi.ultimoTimestamp) / 1000;\n}\n\n// Detectar mensajes duplicados\nif (segundos === 0 && kpi.ultimoTimestamp === ahora) {\n    return null;\n}\n\n// Evitar intervalos negativos o excesivos\n// Después de un reinicio no se contabiliza\n// el tiempo durante el cual no hubo muestras\nif (segundos < 0 || segundos > 5) {\n    segundos = 0;\n}\n\n// Actualizar timestamp incluso si hubo reinicio\nkpi.ultimoTimestamp = ahora;\n\n// Obtener variables de la planta\nconst ph = Number(datos.ph);\nconst turbidez = Number(datos.turbidez);\nconst dosificacion = Number(datos.dosificacion);\n\nconst calidadCorrecta =\n    Number.isFinite(ph) &&\n    Number.isFinite(turbidez) &&\n    ph >= 6.5 &&\n    ph <= 8.5 &&\n    turbidez < 5;\n\n// 1. Volumen tratado acumulado internamente en litros\nif (datos.descarga === true) {\n    kpi.volumenTratado += 25 * segundos / 60;\n}\n\n// 2. Tiempo dentro de especificación\nif (calidadCorrecta) {\n    kpi.tiempoEspecificacion += segundos;\n}\n\n// 3. Consumo simulado de reactivo\n// Dosificación al 100% = 0.1 L/min\nif (Number.isFinite(dosificacion)) {\n    const dosis = Math.max(0, Math.min(100, dosificacion));\n\n    kpi.consumoReactivo +=\n        (dosis / 100) * 0.1 * segundos / 60;\n}\n\n// 4. Tiempo total del proceso\nkpi.tiempoProceso += segundos;\n\n// 5. Disponibilidad operativa aproximada\nif (datos.bomba === true) {\n    kpi.tiempoDisponible += segundos;\n}\n\n// Contador acumulado de muestras\nkpi.muestras++;\n\n// Guardar indicadores persistentemente\ncontext.set(\"kpi\", kpi);\n\n// Calcular porcentajes\nconst porcentajeEspecificacion =\n    kpi.tiempoProceso > 0\n        ? (kpi.tiempoEspecificacion /\n           kpi.tiempoProceso) * 100\n        : 0;\n\nconst disponibilidad =\n    kpi.tiempoProceso > 0\n        ? (kpi.tiempoDisponible /\n           kpi.tiempoProceso) * 100\n        : 0;\n\n// Preparar salida MQTT y Debug\nmsg.payload = {\n    dispositivo: \"A09-Planta\",\n    timestamp: datos.timestamp,\n\n    // Convertir litros a metros cúbicos\n    volumenTratado:\n        Number((kpi.volumenTratado / 1000).toFixed(4)),\n\n    tiempoEspecificacion:\n        Number(porcentajeEspecificacion.toFixed(2)),\n\n    consumoReactivo:\n        Number(kpi.consumoReactivo.toFixed(3)),\n\n    tiempoProceso:\n        Number((kpi.tiempoProceso / 60).toFixed(2)),\n\n    disponibilidad:\n        Number(disponibilidad.toFixed(2)),\n\n    muestras: kpi.muestras\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "9f6b4bdb66a9af50",
+                "28edbc9611694688"
+            ]
+        ]
+    },
+    {
+        "id": "9f6b4bdb66a9af50",
+        "type": "debug",
+        "z": "f8e8a5680da7ae29",
+        "name": "Resultados KPI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "28edbc9611694688",
+        "type": "json",
+        "z": "f8e8a5680da7ae29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 850,
+        "y": 140,
+        "wires": [
+            [
+                "9b094fff8ed719d3"
+            ]
+        ]
+    },
+    {
+        "id": "9b094fff8ed719d3",
+        "type": "mqtt out",
+        "z": "f8e8a5680da7ae29",
+        "name": "Publicar KPI Planta A09",
+        "topic": "utm/iot/A09/kpi/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 1090,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a9d535f027f960af",
+        "type": "function",
+        "z": "f8e8a5680da7ae29",
+        "name": "Registrar históricos de planta",
+        "func": "\nlet datos = msg.payload;\n\nif (typeof datos === \"string\") {\n    try {\n        datos = JSON.parse(datos);\n    } catch (error) {\n        return null;\n    }\n}\n\nif (!datos || !Number.isFinite(Number(datos.nivel))) {\n    return null;\n}\n\nlet historial = context.get(\"historicos\") || [];\n\nconst muestra = {\n    timestamp: datos.timestamp,\n    nivel: Number(datos.nivel),\n    caudal: Number(datos.caudal),\n    ph: Number(datos.ph),\n    turbidez: Number(datos.turbidez)\n};\n\n// Registrar una muestra cada 5 segundos\nconst ultimo = historial[historial.length - 1];\n\nif (ultimo) {\n    const diferencia =\n        Date.parse(muestra.timestamp) -\n        Date.parse(ultimo.timestamp);\n\n    if (!Number.isFinite(diferencia) ||\n        diferencia < 5000) {\n        return null;\n    }\n}\n\nhistorial.push(muestra);\n\n// Mantener hasta 720 muestras (aprox. una hora)\nif (historial.length > 720) {\n    historial = historial.slice(-720);\n}\n\ncontext.set(\"historicos\", historial);\n\nmsg.payload = {\n    totalMuestras: historial.length,\n    ultimaMuestra: muestra\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 300,
+        "wires": [
+            [
+                "62e3b0d41fef4592",
+                "8cf7cb29ad300d3a"
+            ]
+        ]
+    },
+    {
+        "id": "62e3b0d41fef4592",
+        "type": "debug",
+        "z": "f8e8a5680da7ae29",
+        "name": "Históricos registrados A09",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8cf7cb29ad300d3a",
+        "type": "json",
+        "z": "f8e8a5680da7ae29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 420,
+        "wires": [
+            [
+                "53442e151391c88d"
+            ]
+        ]
+    },
+    {
+        "id": "53442e151391c88d",
+        "type": "mqtt out",
+        "z": "f8e8a5680da7ae29",
+        "name": "Publicar históricos A09",
+        "topic": "utm/iot/A09/historicos/grupo9",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4c1379c5b553b0e5",
+        "x": 980,
+        "y": 420,
+        "wires": []
+    }
+]
